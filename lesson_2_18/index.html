@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>доступ к DOM</title>
+    
+</head>
+<body>
+    
+<div id="app">
+
+   <h2 ref="heading">{{ title }}</h2>
+
+   <p ref="testing">To change</p>
+   <p ref="testing">To change</p>
+    
+   <button @click="updateFirstTitle">update First Title</button>
+</div>
+
+    <script src="vue.min.js"></script>
+    <script>
+      var vue1 =  new Vue({
+            el: '#app',
+            data: {
+               title: 'Title'
+               
+            },
+            methods: {
+                updateFirstTitle: function() {
+                    this.title = 'New title'
+                    this.$refs.heading.style.color = 'red'
+                    console.log(this.$refs)
+                    this.$refs.testing.style.color = 'green'
+                }
+            }
+        })
+
+   
+    </script>
+</body>
+</html>

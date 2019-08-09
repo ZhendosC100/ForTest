@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+<div id="app">
+
+   <ul>
+       <!-- <li v-for="(person, index) in people"> {{index +1}} {{person}} </li> -->
+       <li v-for="(person, index) of people"> {{index +1}}. {{person.name}}- <b>{{person.age}}</b></li>
+   </ul>
+
+   
+
+   <ol>
+       <li v-for="num of 2">{{ num }}</li>
+   </ol>
+      
+
+   <hr>
+   <ul>
+       <li v-for="value in person">{{value}}</li>
+   </ul>
+
+   <ul>
+    <li v-for="(value, key, index) in person">{{index+1}} {{key}} {{value}}</li>
+</ul>
+</div>
+    <script src="vue.min.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                // people: [
+                //   'Yauhen',
+                //   'Ira',
+                //   'Max',
+                //   'Alina'
+                // ]
+                people: [
+                    {name: 'Yauhen', age: 33},
+                    {name: 'Ira', age: 33},
+                    {name: 'Max', age: 0}
+                ],
+                person:{
+                        name: 'Yauhen',
+                        age: 30,
+                        job: 'frontend'
+                    }
+
+                
+            }
+        })
+    </script>
+</body>
+</html>

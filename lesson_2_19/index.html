@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>доступ к DOM</title>
+    
+</head>
+<body>
+    
+<div id="app"></div>
+
+    <script src="vue.min.js"></script>
+    <script>
+      let vue =  new Vue({
+            
+            data: {
+               title: 'Title'
+            },
+            template: '<div><h2>{{ title }}</h2><p>Hello p</p></div>'
+        });
+        
+        vue.$mount('#app')
+
+   
+    </script>
+</body>
+</html>
